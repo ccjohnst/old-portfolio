@@ -1,0 +1,28 @@
+.container {
+    /* height: 100vh; */
+    display:grid;
+    place-items: center;
+    grid-template-rows: 100vh  100vh 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bio bio bio"
+    "project project project"
+    "contact contact contact";
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;;
+}
+
+
+.bio{
+    grid-area: bio;
+}
+
+.project{
+    grid-area: project;
+}
+.contact{
+    grid-area: contact;
+}
+
