@@ -1,0 +1,57 @@
+.navigation {
+	position: sticky;
+	left: 0;
+	top: 0;
+	/* transition: all 0.3s ease-out; */
+	/* justify-self: start; */
+	/* text-align: center; */
+	transition: 2 s;
+}
+
+.navigation ul {
+	list-style: none;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+.navigation a:hover::before {
+	content: "chris@developer:";
+	color: rgb(25, 197, 25);
+}
+.navigation a:hover::after {
+	content: "$";
+}
+
+.navigation a:hover {
+	border-right: solid 4px rgb(25, 197, 25);
+	animation: animated-cursor 1000ms steps(29, end) infinite;
+}
+
+.navigation a:active::before {
+	content: "chris@developer:";
+	color: rgb(25, 197, 25);
+}
+.navigation a:active::after {
+	content: "$";
+}
+
+.navigation a:active {
+	border-right: solid 4px rgb(25, 197, 25);
+	animation: animated-cursor 1000ms steps(29, end) infinite;
+}
+
+/* green cursor animation */
+
+@keyframes animated-cursor {
+	from {
+		border-right-color: rgb(25, 197, 25);
+	}
+	to {
+		border-right-color: transparent;
+	}
+}
+/* 
+@media screen width:800p {
+} */

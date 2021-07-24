@@ -1,0 +1,17 @@
+.cardsContainer {
+	display: grid;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	/* grid-template-rows: 1fr 1fr; */
+}
+
+.cardsContainer img {
+	border: 1px solid whitesmoke;
+	justify-self: center;
+}
+
+.cardsContainer h3 {
+	margin-bottom: 0px;
+	letter-spacing: 1px;
+}
