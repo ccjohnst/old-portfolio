@@ -8,7 +8,7 @@ const useFetch = (url) => {
 	useEffect(() => {
 		fetch(url).then((response) =>
 			response.json().then((data) => {
-				const [item] = data.name[0];
+				const item = data["weather"][0]["icon"];
 				setData(item);
 				setLoading(false);
 				console.log(data);
@@ -22,9 +22,17 @@ const WeatherIcon = () => {
 	const { data, loading } = useFetch(
 		"http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&APPID=891ddda0b4720fad959806ec96f4a8dd"
 	);
-
-	// console.log(data);
-	return <>{loading ? <div>...loading weather</div> : <div>{data}</div>}</>;
+	const img = `https://openweathermap.org/img/wn/${data}@2x.png`;
+	// console.log(img);
+	return (
+		<>
+			{loading ? (
+				<div>...loading weather</div>
+			) : (
+				<img width="40px" height="40px" src={img}></img>
+			)}
+		</>
+	);
 };
 
 export default WeatherIcon;

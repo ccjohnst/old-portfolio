@@ -4,6 +4,7 @@ import Navigation from "../components/navigation.js";
 import Card from "../components/cards.js";
 import cv from "../components/cv-creator.png";
 import cc from "../components/cc.png";
+import qm from "../components/question-mark.jpg";
 import WeatherIcon from "../components/weather.js";
 
 import { bio, project, contact } from "../components/layout.module.css";
@@ -13,7 +14,8 @@ const IndexPage = () => {
 		<Layout pageTitle="Home">
 			<Navigation></Navigation>
 			<div className={bio} id={bio}>
-				<p> i am a frontend developer from london</p> <WeatherIcon />
+				<WeatherIcon />
+				<p> i am a frontend developer from london</p>
 			</div>
 			<div className={project} id={project}>
 				<p>Here are my projects</p>
@@ -27,6 +29,7 @@ const IndexPage = () => {
 					description="A mock Architects Website"
 					imgSrc={cc}
 				/>
+				<Card projectName="Untitled" description="TBC" imgSrc={qm} />
 			</div>
 			<div className={contact} id={contact}>
 				Contact me on
