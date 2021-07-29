@@ -1,0 +1,2 @@
+(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var o=n(7294),l=n(5444),a={color:"#232129",padding:"96px",fontFamily:"-apple-system, Roboto, sans-serif, serif"};t.default=function(){return o.createElement("main",{style:a},o.createElement("title",null,"Not found"),o.createElement("p",null,"Page not found"),o.createElement(l.Link,{to:"/"},"Go home"),".")}}}]);
+//# sourceMappingURL=component---src-pages-404-js-e1e4de41681e164de3f4.js.map
