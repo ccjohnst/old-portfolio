@@ -20,7 +20,7 @@ const useFetch = (url) => {
 };
 const WeatherIcon = () => {
 	const { data, loading } = useFetch(
-		"http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&APPID=891ddda0b4720fad959806ec96f4a8dd"
+		"https://api.openweathermap.org/data/2.5/weather?q=london&units=metric&APPID=891ddda0b4720fad959806ec96f4a8dd"
 	);
 	const img = `https://openweathermap.org/img/wn/${data}@2x.png`;
 	// console.log(img);
