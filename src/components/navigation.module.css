@@ -2,42 +2,56 @@
 	position: sticky;
 	left: 0;
 	top: 0;
-	/* transition: all 0.3s ease-out; */
-	/* justify-self: start; */
-	/* text-align: center; */
 	transition: 2 s;
+	z-index: 0;
 }
 
+.navigation h3,
+span {
+	display: inline;
+}
+.navigation h3 {
+	margin: 0;
+}
 .navigation ul {
+	margin-top: 0;
 	list-style: none;
+	padding: 0;
 }
 
-.navigation a {
+.navigation button {
+	border: none;
+	background: none;
+	color: whitesmoke;
+	font-size: 20px;
+	cursor: pointer;
+}
+.navAnchor {
 	text-decoration: none;
 	color: whitesmoke;
 }
-.navigation a:hover::before {
+.navAnchor:hover::before {
 	content: "chris@developer:";
 	color: rgb(25, 197, 25);
 }
-.navigation a:hover::after {
+.navAnchor:hover::after {
 	content: "$";
 }
 
-.navigation a:hover {
+.navAnchor:hover {
 	border-right: solid 4px rgb(25, 197, 25);
 	animation: animated-cursor 1000ms steps(29, end) infinite;
 }
 
-.navigation a:active::before {
+.navAnchor:active::before {
 	content: "chris@developer:";
 	color: rgb(25, 197, 25);
 }
-.navigation a:active::after {
+.navAnchor:active::after {
 	content: "$";
 }
 
-.navigation a:active {
+.navAnchor:active {
 	border-right: solid 4px rgb(25, 197, 25);
 	animation: animated-cursor 1000ms steps(29, end) infinite;
 }
@@ -52,6 +66,55 @@
 		border-right-color: transparent;
 	}
 }
-/* 
-@media screen width:800p {
-} */
+
+/* Active link styling */
+.activeLink {
+	text-decoration: none !important;
+	color: whitesmoke;
+}
+.activeLink::before {
+	content: "chris@developer:";
+	color: rgb(25, 197, 25);
+}
+
+.activeLink::after {
+	content: "$";
+}
+
+.activeLink a,
+a:visited {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+/* Mobile navigation */
+@media only screen and (max-width: 600px) {
+	.navigation {
+		position: fixed;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"navtop"
+			"navbottom";
+		background-color: #333;
+		width: 100%;
+	}
+
+	.navigation h3,
+	span {
+		grid-area: "navtop";
+	}
+	.navigation ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	.navigation li {
+		/* display: none; */
+		grid-area: "navbottom";
+		display: inline;
+		justify-content: space-between;
+		/* align-self: center; */
+		/* padding: 10px; */
+	}
+}

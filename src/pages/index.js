@@ -4,35 +4,77 @@ import Navigation from "../components/navigation.js";
 import Card from "../components/cards.js";
 import cv from "../components/cv-creator.png";
 import cc from "../components/cc.png";
-import qm from "../components/question-mark.jpg";
+import folio from "../components/portfolio.png";
 import WeatherIcon from "../components/weather.js";
+import ContactIcons from "../components/contact.js";
 
-import { bio, project, contact } from "../components/layout.module.css";
+import {
+	bio,
+	project,
+	contact,
+	weatherContainer,
+	weatherCity,
+	technologies,
+} from "../components/layout.module.css";
+
+const cvUrl = `https://ccjohnst.github.io/cv-creator/`;
+const cvCode = `https://github.com/ccjohnst/cv-creator`;
+const coopersonUrl = `https://cooperson-clarke.vercel.app/`;
+const coopersonCode = `https://github.com/ccjohnst/cooperson-clarke`;
 
 const IndexPage = () => {
 	return (
-		<Layout pageTitle="Home">
+		<Layout pageTitle="Chris Johnston - Frontend Developer">
 			<Navigation></Navigation>
 			<div className={bio} id={bio}>
-				<WeatherIcon />
-				<p> i am a frontend developer from london</p>
+				<h2>Chris Johnston</h2>
+
+				<p>
+					{" "}
+					I am a frontend developer from{" "}
+					<div className={weatherContainer}>
+						<WeatherIcon />
+						<p className={weatherCity}>London</p>
+					</div>
+				</p>
+				<p>Technologies that I use are: </p>
+				<ul className={technologies}>
+					<li>Javascript</li>
+					<li>React</li>
+					<li>HTML</li>
+					<li>CSS</li>
+				</ul>
 			</div>
 			<div className={project} id={project}>
-				<p>Here are my projects</p>
+				<h2>Projects</h2>
+				<p>A selection of recent projects I have made can be seen below:</p>
 				<Card
 					projectName="CV Creator"
-					description="A CV making tool"
+					description="A CV making tool that makes good use of React's state management and features an option to save the CV as a PDF"
 					imgSrc={cv}
+					techs={["Javascript", "React", "Sass"]}
+					webUrl={cvUrl}
+					codeUrl={cvCode}
 				/>
 				<Card
 					projectName="C Cooperson"
-					description="A mock Architects Website"
+					description="A mock Architects Website built with NextJS"
 					imgSrc={cc}
+					techs={["Javascript", "React", "NextJS"]}
+					webUrl={coopersonUrl}
+					codeUrl={coopersonCode}
 				/>
-				<Card projectName="Untitled" description="TBC" imgSrc={qm} />
+				<Card
+					projectName="Portfolio"
+					description="A simple portfolio website built using GatsbyJS"
+					imgSrc={folio}
+					techs={["Javascript", "React", "GatsbyJS"]}
+				/>
 			</div>
 			<div className={contact} id={contact}>
-				Contact me on
+				<h2>Contact</h2>
+				For all enquiries, please feel free to contact me via the links below.
+				<ContactIcons />
 			</div>
 		</Layout>
 	);

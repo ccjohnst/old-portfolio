@@ -3,6 +3,9 @@
 	text-align: center;
 	align-items: center;
 	margin: 10px;
+	display: grid;
+	grid-template-rows: 3fr 1fr 2fr;
+	/* grid-template-rows: auto auto auto auto; */
 }
 
 .cardsContainer img {
@@ -11,10 +14,32 @@
 }
 
 .cardsContainer h3 {
-	margin-bottom: 0px;
 	letter-spacing: 1px;
 }
 
 .cardsContainer p {
 	margin-top: 5px;
+}
+
+.cardsContainer a {
+	display: block;
+}
+
+.cardsContainer button {
+	text-decoration: none;
+	border: none;
+	color: whitesmoke;
+	background-color: #333;
+	padding: 10px;
+}
+
+.cardsContainer button:hover {
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+	.cardsContainer {
+		/* grid-template-rows: 1fr 1fr 1fr; */
+		overflow: visible;
+	}
 }
