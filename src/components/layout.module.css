@@ -4,12 +4,9 @@ html {
 	color: whitesmoke;
 	scroll-behavior: smooth;
 	font-family: "Lato", "sans-serif";
-	/* -ms-overflow-style: none;
-	scrollbar-width: none; */
 }
 
 .container {
-	/* height: 100vh; */
 	display: grid;
 	place-items: center;
 	grid-template-rows: 100vh 100vh 100vh;
@@ -22,7 +19,6 @@ html {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	/* background-color: #2a6481; */
 	background-color: #2b2b2b;
 }
 
@@ -30,10 +26,6 @@ html {
 	grid-area: bio;
 	display: grid;
 	grid-template-rows: auto auto auto auto;
-}
-
-.bio p:nth-child(2) {
-	/* margin-bottom: 5px; */
 }
 
 .bio p:nth-child(3) {
@@ -54,12 +46,11 @@ html {
 }
 
 .weatherContainer img {
-	/* padding-right: 10px; */
 	animation: MoveUpDown 2s linear infinite;
 	position: absolute;
 	justify-self: center;
 	margin-bottom: 20px;
-	z-index: 1;
+	z-index: 0;
 }
 
 @keyframes MoveUpDown {
@@ -96,6 +87,13 @@ html {
 	list-style: square;
 }
 
+.project a:visited {
+	text-decoration: none;
+}
+
+.project a {
+	cursor: pointer;
+}
 .project h2 {
 	justify-self: center;
 	grid-column: 1 / -1;
@@ -110,7 +108,7 @@ html {
 	justify-self: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 820px) {
 	.container {
 		grid-template-rows: 100vh minmax(auto, 160vh) 100vh;
 		grid-template-columns: 100vw;
@@ -147,5 +145,20 @@ html {
 		align-items: center;
 		justify-content: center;
 		margin: 10px;
+	}
+}
+
+@media only screen and (max-width: 820px) and (max-height: 400px) {
+	.container {
+		grid-template-rows: repeat(auto-fill, minmax(100vh, 1fr));
+	}
+	.project {
+		height: min-content;
+		grid-template-rows: 1fr 1fr 5fr 5fr;
+	}
+
+	.contact {
+		align-items: stretch;
+		align-self: start;
 	}
 }

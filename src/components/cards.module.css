@@ -1,5 +1,5 @@
 .cardsContainer {
-	justify-content: center;
+	justify-content: safe center;
 	text-align: center;
 	align-items: center;
 	margin: 10px;
@@ -37,7 +37,14 @@
 	opacity: 0.5;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 820px) {
+	.cardsContainer {
+		/* grid-template-rows: 1fr 1fr 1fr; */
+		overflow: visible;
+	}
+}
+
+@media only screen and (max-width: 820px) and (max-height: 400px) {
 	.cardsContainer {
 		/* grid-template-rows: 1fr 1fr 1fr; */
 		overflow: visible;

@@ -21,6 +21,8 @@ const cvUrl = `https://ccjohnst.github.io/cv-creator/`;
 const cvCode = `https://github.com/ccjohnst/cv-creator`;
 const coopersonUrl = `https://cooperson-clarke.vercel.app/`;
 const coopersonCode = `https://github.com/ccjohnst/cooperson-clarke`;
+const portfolioURL = `https://christopherjohnston.co.uk`;
+const portfolioCode = `https://github.com/ccjohnst/portfolio`;
 
 const IndexPage = () => {
 	return (
@@ -69,6 +71,8 @@ const IndexPage = () => {
 					description="A simple portfolio website built using GatsbyJS"
 					imgSrc={folio}
 					techs={["Javascript", "React", "GatsbyJS"]}
+					webUrl={portfolioURL}
+					codeUrl={portfolioCode}
 				/>
 			</div>
 			<div className={contact} id={contact}>

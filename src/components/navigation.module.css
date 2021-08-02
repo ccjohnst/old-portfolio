@@ -3,7 +3,7 @@
 	left: 0;
 	top: 0;
 	transition: 2 s;
-	z-index: 0;
+	z-index: 1;
 }
 
 .navigation h3,
@@ -88,7 +88,7 @@ a:visited {
 }
 
 /* Mobile navigation */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 820px) {
 	.navigation {
 		position: fixed;
 		display: grid;
@@ -110,11 +110,8 @@ a:visited {
 		justify-content: space-around;
 	}
 	.navigation li {
-		/* display: none; */
 		grid-area: "navbottom";
 		display: inline;
 		justify-content: space-between;
-		/* align-self: center; */
-		/* padding: 10px; */
 	}
 }
