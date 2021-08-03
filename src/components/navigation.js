@@ -1,10 +1,5 @@
 import * as React from "react";
-import {
-	navigation,
-	navLink,
-	activeLink,
-	navAnchor,
-} from "./navigation.module.css";
+import { navigation, activeLink, navAnchor } from "./navigation.module.css";
 
 const Navigation = () => {
 	const [activeNavLink, setActiveNavLink] = React.useState("");
@@ -29,12 +24,14 @@ const Navigation = () => {
 		<nav className={navigation}>
 			<h3>
 				/root/navigation/
+				{/* Open and close menu and change icon to expand or retract */}
 				<button onClick={() => menuHandler()}>{menuNav ? "↰" : "↴"}</button>
 			</h3>
+			{/* Set page to active if active and close menu once clicked */}
 			{menuNav ? (
 				<ul>
 					<li
-						className={activeNavLink === "bio" ? activeLink : navLink}
+						className={activeNavLink === "bio" ? activeLink : null}
 						onClick={() => navHandler("bio")}
 					>
 						<a
@@ -45,7 +42,7 @@ const Navigation = () => {
 						</a>
 					</li>
 					<li
-						className={activeNavLink === "project" ? activeLink : navLink}
+						className={activeNavLink === "project" ? activeLink : null}
 						onClick={() => navHandler("project")}
 					>
 						<a
@@ -56,7 +53,7 @@ const Navigation = () => {
 						</a>
 					</li>
 					<li
-						className={activeNavLink === "contact" ? activeLink : navLink}
+						className={activeNavLink === "contact" ? activeLink : null}
 						onClick={() => navHandler("contact")}
 					>
 						<a

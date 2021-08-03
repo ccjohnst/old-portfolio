@@ -23,6 +23,12 @@
 
 .cardsContainer a {
 	display: block;
+	text-decoration: underline;
+}
+
+.cardsContainer a:visited {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .cardsContainer button {
@@ -39,14 +45,12 @@
 
 @media only screen and (max-width: 820px) {
 	.cardsContainer {
-		/* grid-template-rows: 1fr 1fr 1fr; */
 		overflow: visible;
 	}
 }
 
 @media only screen and (max-width: 820px) and (max-height: 400px) {
 	.cardsContainer {
-		/* grid-template-rows: 1fr 1fr 1fr; */
 		overflow: visible;
 	}
 }

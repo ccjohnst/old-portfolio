@@ -97,7 +97,8 @@ a:visited {
 		grid-template-areas:
 			"navtop"
 			"navbottom";
-		background-color: #333;
+		/* background-color: #333; */
+		background-color: #373b44;
 		width: 100%;
 	}
 
