@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout.js";
 import Navigation from "../components/navigation.js";
+
 import Card from "../components/cards.js";
 import cv from "../components/cv-creator.png";
 import cc from "../components/cc.png";
