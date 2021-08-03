@@ -11,7 +11,6 @@ const useFetch = (url) => {
 				const item = data["weather"][0]["icon"];
 				setData(item);
 				setLoading(false);
-				console.log(data);
 			})
 		);
 	}, []);
