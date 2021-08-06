@@ -1,9 +1,19 @@
 import * as React from "react";
-import { navigation, activeLink, navAnchor } from "./navigation.module.css";
+import {
+	navigation,
+	activeLink,
+	navAnchor,
+	linkOptions,
+	linkRemove,
+	hamburgerIcon,
+} from "./navigation.module.css";
 
 const Navigation = () => {
 	const [activeNavLink, setActiveNavLink] = React.useState("");
 	const [menuNav, setMenuNavOpen] = React.useState(true);
+
+	// Access the width state from our custom hook
+	const { width } = PageViewport();
 
 	// Function to set style of clicked nav item to be active
 	const navHandler = (param) => {
@@ -18,18 +28,25 @@ const Navigation = () => {
 	};
 
 	// Function to close the nav menu after an item has been clicked
-	const closeNavMenu = () => setMenuNavOpen(false);
+	const closeNavMenu = () => {
+		// Only close menu after clicking a nav item if in mobile viewport
+		if (width <= 820) {
+			setMenuNavOpen(false);
+		}
+	};
 
 	return (
 		<nav className={navigation}>
 			<h3>
 				/root/navigation/
 				{/* Open and close menu and change icon to expand or retract */}
-				<button onClick={() => menuHandler()}>{menuNav ? "↰" : "↴"}</button>
+				<button className={hamburgerIcon} onClick={() => menuHandler()}>
+					{menuNav ? "↰" : "↴"}
+				</button>
 			</h3>
 			{/* Set page to active if active and close menu once clicked */}
 			{menuNav ? (
-				<ul>
+				<ul className={linkOptions}>
 					<li
 						className={activeNavLink === "bio" ? activeLink : null}
 						onClick={() => navHandler("bio")}
@@ -69,4 +86,18 @@ const Navigation = () => {
 	);
 };
 
+// Custom hook to calculate the current page size.
+function PageViewport() {
+	// create state that is set to width
+	const [width, setWidth] = React.useState(window.innerWidth);
+
+	// useEffect to calculate the window resizing
+	React.useEffect(() => {
+		const handleWindowResizing = () => setWidth(window.innerWidth);
+		window.addEventListener("resize", handleWindowResizing);
+		return () => window.removeEventListener("resize", handleWindowResizing);
+	}, []);
+
+	return { width };
+}
 export default Navigation;
