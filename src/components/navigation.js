@@ -89,7 +89,7 @@ const Navigation = () => {
 // Custom hook to calculate the current page size.
 function PageViewport() {
 	// create state that is set to width
-	const [width, setWidth] = React.useState(window.innerWidth);
+	const [width, setWidth] = React.useState(0);
 
 	// useEffect to calculate the window resizing
 	React.useEffect(() => {
