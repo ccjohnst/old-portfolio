@@ -87,9 +87,14 @@ const Navigation = () => {
 };
 
 // Custom hook to calculate the current page size.
+
 function PageViewport() {
-	// create state that is set to width
-	const [width, setWidth] = React.useState(0);
+	// set default breakpoint of 0
+	const defaultBreakpoint = 0;
+	// create state that is set to width. Check if window is defined.
+	const [width, setWidth] = React.useState(
+		typeof window !== "undefined" ? window.innerWidth : defaultBreakpoint
+	);
 
 	// useEffect to calculate the window resizing
 	React.useEffect(() => {
