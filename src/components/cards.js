@@ -11,11 +11,14 @@ const Card = ({
 	webUrl,
 	codeUrl,
 }) => {
+	// function to map out each of the technologies as a lisr element
 	const techItems = techs.map((tech) => <li key={uniqid()}>{tech}</li>);
 
+	// React hook to make a state for the card view more button
 	const [open, setOpen] = React.useState(false);
 
-	const handleClick = (e) => {
+	// set state to open or close when view more is clicked
+	const handleClick = () => {
 		setOpen(!open);
 	};
 
@@ -35,7 +38,7 @@ const Card = ({
 					<a href={codeUrl} target="_blank" rel="noreferrer noopener">
 						Code
 					</a>
-					<p>Technologies used</p>
+					<p>Technologies used:</p>
 					<ul>{techItems}</ul>
 				</>
 			) : null}
