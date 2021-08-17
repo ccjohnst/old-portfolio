@@ -129,10 +129,10 @@ html {
 
 	.project {
 		align-self: stretch;
-		height: 100vh;
+		height: 100%;
 		grid-area: project;
 		display: grid;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 6fr 6fr;
 		grid-template-columns: 1fr 1fr;
 		text-align: center;
 	}
