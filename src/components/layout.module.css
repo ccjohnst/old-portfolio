@@ -47,6 +47,9 @@ html {
 	margin-bottom: 10px;
 }
 
+.bio img {
+	justify-self: center;
+}
 .weatherContainer {
 	display: inline-grid;
 	grid-template-rows: auto;

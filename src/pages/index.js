@@ -10,6 +10,8 @@ import cc from "../components/cc.png";
 import tm from "../components/tm-marketing.png";
 import folio from "../components/portfolio.png";
 
+// Bio picture
+import cj from "../components/cjretro.png";
 // Contact section icons
 import WeatherIcon from "../components/weather.js";
 import ContactIcons from "../components/contact.js";
@@ -40,6 +42,12 @@ const IndexPage = () => {
 			{/* Navigation bar cpomonent */}
 			<Navigation></Navigation>
 			<div className={bio} id={bio}>
+				<img
+					src={cj}
+					alt="A picture of myself in pixel art"
+					width="150px"
+					height="150px"
+				></img>
 				<h2>Chris Johnston</h2>
 
 				<p>
