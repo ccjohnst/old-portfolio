@@ -16,6 +16,7 @@
 		"deploy": "gatsby build && gh-pages -d public"
 	},
 	"dependencies": {
+		"98.css": "^0.1.17",
 		"gatsby": "^3.9.1",
 		"gatsby-plugin-anchor-links": "^1.2.1",
 		"gatsby-plugin-robots-txt": "^1.6.8",

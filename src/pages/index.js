@@ -52,12 +52,21 @@ const IndexPage = () => {
 
 				<p>
 					{" "}
-					I am a frontend developer from{" "}
+					I am a front-end developer from{" "}
 					{/* Weather Container displays current weather icon above the cityName */}
 					<div className={weatherContainer}>
 						<WeatherIcon />
 						<p className={weatherCity}>London</p>
 					</div>
+					. I am particularly passionate about Javascript and have been greatly
+					enjoying learning Reactjs.
+					<p>
+						I have been teaching myself front-end development whilst working a
+						busy full time job, which has been a challenging, but highly
+						enjoyable journey. Please scroll or navigate to the project section
+						of my page to see a recent selection of projects. All code can be
+						found for my GitHub, linked below in the contact section.
+					</p>
 				</p>
 				<p>Technologies that I use are: </p>
 				<ul className={technologies}>
